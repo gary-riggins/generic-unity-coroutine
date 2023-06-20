@@ -60,7 +60,7 @@ In the example above, a coroutine `YourCoroutine` is started using the `StartCor
 
 ### Exceptions
 
-Exception will be thrown under if any of these circumstances are true:
+Exception will be thrown if any of these circumstances are true:
 - Attempting to access the result of a coroutine before it has yielded a result will throw an `InvalidOperationException`.
 - After a coroutine is cancelled with `.Cancel()`, attempting to access the result will throw an `OperationCanceledException`.
 - If the coroutine throws an exception during execution, the `Coroutine<T>` object will capture and re-throw the exception when the result is accessed.
@@ -83,7 +83,7 @@ A class that represents a coroutine with a result.
 
 - `Result`: The result of the coroutine. Accessing this property will throw an exception if the coroutine has not yielded a result yet.
 - `Cancel()`: Cancels the execution of the coroutine.
-- `coroutine` (implicit operator Coroutine): Allows implicit conversion from `Coroutine<T>` to `UnityEngine.Coroutine`.
+- `implicit operator UnityEngine.Coroutine`: Allows implicit conversion from `Coroutine<T>` to `UnityEngine.Coroutine`.
 
 ## License
 

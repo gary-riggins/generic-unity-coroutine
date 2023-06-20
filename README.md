@@ -22,7 +22,7 @@ public class CoroutineExample : MonoBehaviour
     private IEnumerator Start()
     {
         // Start the coroutine
-        Coroutine<int> coroutine = this.StartCoroutine<int>(YourCoroutine());
+        Coroutine<int> coroutine = this.StartCoroutine<int>(YourRoutine());
 
         // Wait for the coroutine to complete by casting to a UnityEngine.Coroutine
         yield return (Coroutine)coroutine;
@@ -40,7 +40,7 @@ public class CoroutineExample : MonoBehaviour
         }
     }
 
-    private IEnumerator YourCoroutine()
+    private IEnumerator YourRoutine()
     {
         // Your coroutine logic here
         yield return new WaitForSeconds(2);
@@ -56,7 +56,7 @@ public class CoroutineExample : MonoBehaviour
 }
 ```
 
-In the example above, a coroutine `YourCoroutine` is started using the `StartCoroutine<int>` extension method. The result of the coroutine is accessed using the `Result` property of the `Coroutine<int>` object.
+In the example above, a coroutine `YourRoutine` is started using the `StartCoroutine<int>` extension method. The result of the coroutine is accessed using the `Result` property of the `Coroutine<int>` object.
 
 ### Exceptions
 

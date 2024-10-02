@@ -1,3 +1,7 @@
+// Copyright (c) 2023 Gary Riggins
+// This code is licensed under the MIT License.
+// See the LICENSE file for details.
+
 using System;
 using System.Collections;
 using UnityEngine;
